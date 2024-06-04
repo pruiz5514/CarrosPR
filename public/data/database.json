@@ -36,12 +36,12 @@
     },
     {
       "id": "c05c",
-      "brand": "Volkswagen",
-      "model": "Golf",
-      "year": "2019",
-      "price": "70000000",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_2X_952311-MCO76622890585_052024-F.webp",
-      "isActive": true
+      "brand": "Nissan",
+      "model": "March",
+      "year": "2024",
+      "price": "67500000",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_2X_789172-MCO76771727343_062024-F.webp",
+      "isActive": false
     }
   ]
 }

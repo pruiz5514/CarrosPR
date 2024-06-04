@@ -27,7 +27,7 @@ async function showCards(){
                     <h5 class="card-title">${element.brand} ${element.model}</h5>
                     <p class="card-text">${element.year}</p>
                     <p class="card-text">$ ${element.price}</p>
-                    <a href="/app/Login/Login.html" class="btn btn-primary">Ver mas</a>
+                    <a href="/app/CarDetail/CarDetail.html" class="btn btn-primary view-more" id=${element.id}>Ver mas</a>
                 </div>
             </div>
             `
@@ -35,6 +35,12 @@ async function showCards(){
         
     })
 
+    document.addEventListener("click",(event)=>{
+        if(event.target.classList.contains("view-more")){
+            const idCar = event.target.id;
+            localStorage.setItem("idCar",idCar);
+        }
+    })
     return main;
 }
 

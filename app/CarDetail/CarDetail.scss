@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    .feature-container{
+
+        .edit-container{
+            display: flex;
+            gap: 30px;
+
+            button{
+                height: 25px;
+                width: 70px;
+            }
+        }
+        form{
+
+            input{
+                width: 150px;
+                margin-right: 20px;
+            }
+            .send-button{
+                height: 25px;
+                width: 70px;
+            }
+        }
+    }
+}
