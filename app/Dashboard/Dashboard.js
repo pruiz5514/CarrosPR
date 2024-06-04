@@ -1,3 +1,16 @@
+const user = localStorage.getItem("user");
+const logOut = document.querySelector("#log-out");
+
+if(user == null){
+    window.location.href = "/"
+};
+
+logOut.addEventListener("click", ()=>{
+    localStorage.clear()
+    window.location.href = "/"
+})
+
+
 const main = document.querySelector("main");
 const url = "http://localhost:3000/cars";
 
@@ -6,17 +19,20 @@ async function showCards(){
     const data = await response.json();
 
     data.forEach(element => {
-        main.innerHTML += `
-        <div class="card" style="width: 18rem;">
-            <img src=${element.image} class="card-img-top" alt="${element.id}">
-            <div class="card-body">
-                <h5 class="card-title">${element.brand} ${element.model}</h5>
-                <p class="card-text">${element.year}</p>
-                <p class="card-text">$ ${element.price}</p>
-                <a href="/app/Login/Login.html" class="btn btn-primary">Ver mas</a>
+        if(element.isActive){
+            main.innerHTML += `
+            <div class="card" style="width: 18rem;">
+                <img src=${element.image} class="card-img-top" alt="${element.id}">
+                <div class="card-body">
+                    <h5 class="card-title">${element.brand} ${element.model}</h5>
+                    <p class="card-text">${element.year}</p>
+                    <p class="card-text">$ ${element.price}</p>
+                    <a href="/app/Login/Login.html" class="btn btn-primary">Ver mas</a>
+                </div>
             </div>
-        </div>
-        `
+            `
+        }
+        
     })
 
     return main;

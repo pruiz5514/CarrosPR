@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/scss/style.scss">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <header class="mb-5">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/app/Dashboard/Dashboard.html">Carros PR</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/app/Dashboard/Dashboard.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/app/AddCar/AddCar.html">Agregar</a>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-primary" id="log-out">Cerrar sesión</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="w-75 m-auto d-flex flex-wrap flex-column gap-5 align-items-center">
+        <form class="w-75">
+            <div class="mb-3">
+                <label for="brand" class="form-label">Marca</label>
+                <input type="text" class="form-control" id="brand">
+            </div>
+            <div class="mb-3">
+                <label for="model" class="form-label">Modelo</label>
+                <input type="text" class="form-control" id="model">
+            </div>
+            <div class="mb-3">
+              <label for="year" class="form-label">Año</label>
+              <input type="number" class="form-control" id="year">
+            </div>
+            <div class="mb-3">
+              <label for="price" class="form-label">Precio</label>
+              <input type="number" class="form-control" id="price">
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Imagen</label>
+                <input type="link" class="form-control" id="image">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <section class="w-75">
+            <table class="table w-100">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Opcion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+        </section>
+    </main>
+
+    <footer class="w-100 bg-body-tertiary d-flex justify-content-center align-content-center py-4 mt-5">
+      <p class="m-0">Carros PR</p>
+    </footer>
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="./AddCar.js"></script>
+  </body>
+</html>
